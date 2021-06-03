@@ -1,6 +1,6 @@
 {
   "name": "cxy-ui",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Depends on vue-cli3, refer to a UI component library encapsulated by element-ui",
   "private": false,
   "author": {
