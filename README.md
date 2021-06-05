@@ -22,3 +22,9 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+### 主题更换
+```
+ 改变html标签的data-theme属性，可选值有"dark", "light"
+```

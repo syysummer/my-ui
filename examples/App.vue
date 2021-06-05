@@ -3,11 +3,11 @@
     <!-- button测试 -->
     <div class="test-item">
       <cx-button type="success" @click="handleClick">我是button1</cx-button>
-      <cx-button type="primaly">我是button2</cx-button>
+      <!-- <cx-button type="primaly">我是button2</cx-button> -->
     </div>
     
     <!-- dialog测试 -->
-    <cx-dialog :visible="isDialogShow" title="提示" >
+    <!-- <cx-dialog :visible.sync="isDialogShow" title="提示">
       <ul>
         <li>1</li>
         <li>2</li>
@@ -17,7 +17,7 @@
         <cx-button @click="isDialogShow = false">取 消</cx-button>
         <cx-button type="primary" @click="isDialogShow = false">确 定</cx-button>
       </template>
-    </cx-dialog>
+    </cx-dialog> -->
 
     <!-- input测试 -->
     <div class="test-item">
@@ -45,7 +45,10 @@ export default {
   },
   methods: {
     handleClick(){
-      this.isDialogShow = true
+      // this.isDialogShow = true
+      this.$cxdialog({
+        msg: '提示的具体内容',
+      })
     },
     handleSwitchChange(value){
       this.isChecked = value

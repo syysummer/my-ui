@@ -12,7 +12,7 @@
         </div>
         <div class="cx-dialog__body">
           <!-- 默认插槽 -->
-          <slot></slot>
+          <slot name="content"></slot>
         </div>
         <div class="cx-dialog__footer" v-if="$slots.footer">
           <slot name="footer"></slot>
@@ -43,15 +43,31 @@ export default {
       default: false
     }
   },
+  data () {
+    return {
+      istemplete: true
+    }
+  },
   methods: {
     handleClose () {
       this.$emit('update:visible', false)
+      if(!this.istemplete){
+        this.visible = false
+      }
     },
     afterEnter () {
       this.$emit('opened')
     },
     afterLeave () {
       this.$emit('closed')
+    },
+    show (option) {
+      this.istemplete = false
+      this.visible = true
+      this.$slots.content = option.msg
+    },
+    close () {
+      this.visible = false
     }
   }
 }

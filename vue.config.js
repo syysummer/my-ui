@@ -1,4 +1,5 @@
 const path = require('path')
+const resolve = dir => path.join(__dirname, dir)
 module.exports = {
   pages: {
     index: {
@@ -18,5 +19,7 @@ module.exports = {
         // 修改它的选项...
         return options
       })
-  }
+    config.resolve.alias // 添加别名
+    .set('@theme', resolve('theme'))
+   }
 }

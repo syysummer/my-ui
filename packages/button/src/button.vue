@@ -59,6 +59,7 @@ export default {
 </script>
 
 <style lang='scss'>
+@import "@theme/_handle.scss";
 .cx-button {
   display: inline-block;
   line-height: 1;
@@ -98,7 +99,6 @@ export default {
     color: #fff;
     background-color: #409eff;
     border-color: #409eff;
-
     &:hover,
     &:focus {
       background: #66b1ff;
@@ -118,24 +118,27 @@ export default {
     }
   }
   &--success {
-    color: #fff;
-    background-color: #67c23a;
-    border-color: #67c23a;
+    // color: #fff;
+    // background-color: #67c23a;
+    // border-color: #67c23a;
+    @include font_color("font_color1");
+    @include background_color("background_color1");
+    @include border_color("border_color1");
     &:hover,
     &:focus {
-      background: #85ce61;
-      border-color: #85ce61;
+      // background: #85ce61;
+      // border-color: #85ce61;
       color: #fff;
     }
     &.is-plain {
-      color: #67c23a;
-      background: #f0f9eb;
-      border-color: #c2e7b0;
+      // color: #67c23a;
+      // background: #f0f9eb;
+      // border-color: #c2e7b0;
       &:hover,
       &:focus {
-        background: #67c23a;
-        border-color: #67c23a;
-        color: #fff;
+        // background: #67c23a;
+        // border-color: #67c23a;
+        // color: #fff;
       }
     }
   }

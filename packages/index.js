@@ -1,4 +1,5 @@
 // 导入颜色选择器组件
+import './rem'
 import Button from './button'
 import Dialog from './dialog'
 import Input from './input'
@@ -16,7 +17,9 @@ const install = function (Vue) {
   if (install.installed) return;
   // 遍历注册全局组件
   components.forEach(component => {
+    console.log('全局引入')
     Vue.component(component.name, component)
+    Vue.use(component)
   })
 }
 // 判断是否是直接引入文件
