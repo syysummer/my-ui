@@ -7,12 +7,14 @@ import {
   Button,
   Dialog,
   Input,
-  Switch
+  Switch,
+  Toast,
 } from '../packages/index'
 Vue.use(Button)
 Vue.use(Dialog)
 Vue.use(Input)
 Vue.use(Switch)
+Vue.use(Toast)
 
 Vue.config.productionTip = false
 

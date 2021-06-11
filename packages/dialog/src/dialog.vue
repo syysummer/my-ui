@@ -22,7 +22,7 @@
   </transition>
 </template>
 
-<script>
+<script type="text/babel">
 export default {
   name: 'CxDialog',
   props: {
@@ -47,6 +47,9 @@ export default {
     return {
       istemplete: true
     }
+  },
+  mounted () {
+    console.log('dialog哈哈哈')
   },
   methods: {
     handleClose () {

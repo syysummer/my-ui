@@ -22,7 +22,7 @@
   </div>
 </template>
 
-<script>
+<script type="text/babel">
 export default {
   name: 'CxInput',
   data () {

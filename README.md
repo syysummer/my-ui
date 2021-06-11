@@ -1,4 +1,4 @@
-# cx-ui
+# syy-ui
 
 ## Project setup
 ```

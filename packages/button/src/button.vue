@@ -19,7 +19,7 @@
   </button>
 </template>
 
-<script>
+<script type="text/babel">
 export default {
   name: 'CxButton',
   props: {
@@ -128,7 +128,7 @@ export default {
     &:focus {
       // background: #85ce61;
       // border-color: #85ce61;
-      color: #fff;
+      // color: #fff;
     }
     &.is-plain {
       // color: #67c23a;

@@ -4,21 +4,21 @@ import Button from './button'
 import Dialog from './dialog'
 import Input from './input'
 import Switch from './switch'
+import Toast from './toast'
 import './fonts/font.scss'
 // 存储组件列表
 const components = [
   Button,
   Dialog,
   Input,
-  Switch
+  Switch,
+  Toast
 ]
 // 定义 install 方法，接收 Vue 作为参数。如果使用 use 注册插件，则所有的组件都将被注册
 const install = function (Vue) {
   if (install.installed) return;
   // 遍历注册全局组件
   components.forEach(component => {
-    console.log('全局引入')
-    Vue.component(component.name, component)
     Vue.use(component)
   })
 }
@@ -33,6 +33,7 @@ export default {
   Dialog,
   Input,
   Switch,
+  Toast,
   install
 }
 
@@ -42,5 +43,6 @@ export {
   Dialog,
   Input,
   Switch,
+  Toast,
   install
 }
